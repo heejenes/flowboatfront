@@ -16,7 +16,7 @@ export class LoginPage extends React.Component {
   
     render() {
       return(
-        <View style={{flex: 1, backgroundColor: '#E5B180', alignItems: 'center', justifyContent: 'center'}}>
+        <View style={{flex: 1, backgroundColor: '#FAF3F3', alignItems: 'center', justifyContent: 'center'}}>
           <TouchableHighlight onPress={()=>{this.setState({height: 100})}}>
             <View style={{margin: 5 }}>
               <Text>Log in!</Text>
