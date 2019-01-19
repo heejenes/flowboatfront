@@ -55,7 +55,7 @@ export class MenuPage extends React.Component {
 
             {/*TOP MENU*/}
             <View style={{height: 100, justifyContent: 'center', backgroundColor: 'FCF9F8'}}>
-                <View style={{flex: 25, flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+                <View style={{flex: 50, flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
                     {/*<View style={{flex: 1, height: 50, width: 50, backgroundColor: 'white', marginLeft: 40}}/>*/}
                     <View>
                         <TouchableHighlight onPress={()=> {
@@ -83,7 +83,8 @@ export class MenuPage extends React.Component {
                     </View>
 
                 </View>  
-                <View style={{flex: 1, backgroundColor: '#DCC6AB'}}/> 
+                <View style={{flex: 2, backgroundColor: '#DCC6AB'}}/> 
+                <View style={{flex: 1, backgroundColor: '#9B9B9B'}}/> 
             </View>
             
 
