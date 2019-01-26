@@ -20,13 +20,15 @@ import {MenuPage} from './pages/MenuPage.js';
 import {LoginPage} from './pages/LoginPage.js';
 import {JobProfilePage} from './pages/JobProfilePage.js';
 import {UserProfilePage} from './pages/UserProfilePage.js';
+import {ChatRoomPage} from './pages/ChatRoomPage.js';
 
 const app = createStackNavigator({
   Login:LoginPage,
   UserProfile:UserProfilePage,
   //Signup:SignupPage,
   Menu:MenuPage,
-  JobProfile:JobProfilePage
+  JobProfile:JobProfilePage,
+  ChatRoom:ChatRoomPage
 },
 {
   initialRouteName: 'Menu'

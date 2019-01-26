@@ -9,18 +9,22 @@ import {
 import { Panel } from './PanelComp.js';
 
 //const request = require('request-promise');
+json = require('../../data.json');
 
 export class PanelContainer extends React.Component{
     constructor(props) {
         super(props);
         //this.jobs = request(url, "utf-8");
+        this.jobs = json.data;
         panelList = [];
-        for(var i=0; i<props.jobs.length; i++) {
+        for(var i=0; i<json.data.length; i++) {
             panelList.push(React.createElement(Panel, {
-                job: props.jobs[i], 
+                //job: props.jobs[i]
                 navigation: props.navigation, 
-                key: props.jobs[i].id,
-                id: props.jobs[i].id
+                key: json.data[i].id,
+                id: json.data[i].id,
+                job: json.data[i]
+
             }));
             
         }

@@ -30,15 +30,15 @@ export class Panel extends React.Component {
             }}>
                 <View style={{justifyContent: 'center', height: 110, backgroundColor: '#FFF0EF', borderBottomWidth: 2, borderColor: '#ABA097'}}>
                     <View style={{flexDirection: 'row', marginLeft: 10}}>
-                        <View>
-                            <Text>{this.profile.title}</Text>
-                            <Text>{this.profile.owner}</Text>
-                            <Text>{this.profile.time}</Text>
+                        <View style={{marginRight: 30, width: 190}}>
+                            <Text style={{marginBottom: 10, fontSize: 15}}>{this.profile.title}</Text>
+                            <Text style={{marginBottom: 10}}>{this.profile.owner}</Text>
+                            <Text style={{marginBottom: 10}}>{this.profile.time}</Text>
                             {/*<Text>{address}</Text>*/}
                         </View>
                         <View>
-                            <Text>{this.profile.desc}</Text>
-                            <Text>{this.profile.pay}</Text>
+                            <Text style={{marginBottom: 10}}>{this.profile.desc.slice(0,20)+"..."}</Text>
+                            <Text style={{marginBottom: 10}}>{this.profile.pay}</Text>
                         </View>
                     </View>
                 </View>

@@ -60,7 +60,7 @@ export class MenuPage extends React.Component {
                     <View>
                         <TouchableHighlight onPress={()=> {
                             this.user = this.props.navigation.getParam('User');
-                            console.log(`user`);
+                            console.log(this.user);
                             if (this.user!=null){
                                 this.props.navigation.navigate('UserProfile', {user: this.user});
                             }

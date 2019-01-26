@@ -8,7 +8,7 @@ import {
 export class UserProfilePage extends React.Component {
     constructor (props) {
         super(props);
-        this.user = props.navigation.getParam('user');
+        this.user = this.props.navigation.getParam('user');
     }
 
     render(){
