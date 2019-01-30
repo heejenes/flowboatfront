@@ -15,35 +15,7 @@ export class MenuPage extends React.Component {
     constructor(props){
         super(props);
         this.state = {};
-        this.user = null;
-        
-        jobs = [
-                    {
-                        id: 'aaa',
-                        title: 'a',
-                        owner: 'a',
-                        time: 'a',
-                        location: {
-                            number: '1',
-                            streetname: 'a',
-                        },
-                        desc: 'a',
-                        pay: 'a'
-                    },
-                    {
-                        id: 'bbb',
-                        title: 'b',
-                        owner: 'b',
-                        time: 'b',
-                        location: {
-                            number: '2',
-                            streetname: 'b',
-                        },
-                        desc: 'b',
-                        pay: 'b'
-                    }
-                ];
-                
+        this.user = null;                
     }
 
     render() {
@@ -54,8 +26,8 @@ export class MenuPage extends React.Component {
 
 
             {/*TOP MENU*/}
-            <View style={{height: 100, justifyContent: 'center', backgroundColor: 'FCF9F8'}}>
-                <View style={{flex: 50, flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+            <View style={{height: 90, justifyContent: 'center', backgroundColor: "#C34C4C"}}>
+                <View style={{flex: 53, flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
                     {/*<View style={{flex: 1, height: 50, width: 50, backgroundColor: 'white', marginLeft: 40}}/>*/}
                     <View>
                         <TouchableHighlight onPress={()=> {
@@ -75,16 +47,20 @@ export class MenuPage extends React.Component {
                     </View>
                     <View>
                         <Text style={{
-                        flex: 1, fontSize: 30, color: 'black', marginLeft: 40, marginRight: 40, marginTop: 30
+                        flex: 1, fontSize: 30, color: 'white', marginLeft: 40, marginRight: 40, marginTop: 30
                         }}>REQUEST</Text>
                     </View>
                     <View>
-                        <View style={{flex: 1, height: 50, width: 50, marginLeft: 30}}/>
+                        <View style={{flex: 1, height: 50, width: 50, marginLeft: 30, alignItems: 'center', justifyContent: 'center'}}>
+                            <TouchableHighlight onPress = {()=>{this.props.navigation.navigate('MakeJob', {user: this.user});}}>
+                                <Image source={require('../assets/mkButton.png')}/>
+                            </TouchableHighlight>
+                        </View>
                     </View>
 
                 </View>  
-                <View style={{flex: 2, backgroundColor: '#DCC6AB'}}/> 
-                <View style={{flex: 1, backgroundColor: '#9B9B9B'}}/> 
+                <View style={{flex: 0, backgroundColor: '#8CB4B4'}}/> 
+                <View style={{flex: 0, backgroundColor: '#9B9B9B'}}/> 
             </View>
             
 
@@ -92,10 +68,10 @@ export class MenuPage extends React.Component {
 
             <ScrollView>
 
-                <PanelContainer jobs={jobs} navigation={this.props.navigation}/>
+                <PanelContainer navigation={this.props.navigation}/>
 
             </ScrollView>
-
+            
             {/*<View style={{flex: 16, backgroundColor: '#FFFBF7'}}/>*/}
         </View>
         );

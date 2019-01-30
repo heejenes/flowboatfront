@@ -1,29 +1,22 @@
 import React from 'react';
 
-import {
-  Text, 
-  View, 
-  TouchableHighlight
-} from 'react-native';
-
 import { Panel } from './PanelComp.js';
 
 //const request = require('request-promise');
-json = require('../../data.json');
-
 export class PanelContainer extends React.Component{
     constructor(props) {
         super(props);
         //this.jobs = request(url, "utf-8");
-        this.jobs = json.data;
+        this.json = require('../../data/data.json');
         panelList = [];
-        for(var i=0; i<json.data.length; i++) {
+        listLength = this.json.data.length;
+        for(var i=0; i<listLength; i++) {
             panelList.push(React.createElement(Panel, {
                 //job: props.jobs[i]
                 navigation: props.navigation, 
-                key: json.data[i].id,
-                id: json.data[i].id,
-                job: json.data[i]
+                key: this.json.data[i].id,
+                id: this.json.data[i].id,
+                job: this.json.data[i]
 
             }));
             

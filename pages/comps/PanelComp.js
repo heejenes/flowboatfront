@@ -6,16 +6,14 @@ import {
   TouchableHighlight
 } from 'react-native';
 
-import { withNavigation } from 'react-navigation';
-
 export class Panel extends React.Component {
     constructor (props) {
         super(props);
         
-        this.profile = this.props.job,
+        this.profile = this.props.job;
     
 
-        console.log(this.profile.job);
+        //console.log(this.profile.job);
     }
 
     render(){
@@ -28,7 +26,7 @@ export class Panel extends React.Component {
                 this.props.navigation.navigate('JobProfile', { job: this.profile }); 
                 //console.log(this.profile.job); 
             }}>
-                <View style={{justifyContent: 'center', height: 110, backgroundColor: '#FFF0EF', borderBottomWidth: 2, borderColor: '#ABA097'}}>
+                <View style={{justifyContent: 'center', height: 110, backgroundColor: '#FFFFFF', borderBottomWidth: 1, borderColor: '#E5E5E5'}}>
                     <View style={{flexDirection: 'row', marginLeft: 10}}>
                         <View style={{marginRight: 30, width: 190}}>
                             <Text style={{marginBottom: 10, fontSize: 15}}>{this.profile.title}</Text>

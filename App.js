@@ -21,6 +21,7 @@ import {LoginPage} from './pages/LoginPage.js';
 import {JobProfilePage} from './pages/JobProfilePage.js';
 import {UserProfilePage} from './pages/UserProfilePage.js';
 import {ChatRoomPage} from './pages/ChatRoomPage.js';
+import {MakeJobPage} from './pages/MakeJobPage.js';
 
 const app = createStackNavigator({
   Login:LoginPage,
@@ -28,7 +29,8 @@ const app = createStackNavigator({
   //Signup:SignupPage,
   Menu:MenuPage,
   JobProfile:JobProfilePage,
-  ChatRoom:ChatRoomPage
+  ChatRoom:ChatRoomPage,
+  MakeJob:MakeJobPage
 },
 {
   initialRouteName: 'Menu'

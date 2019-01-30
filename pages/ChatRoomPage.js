@@ -7,6 +7,7 @@ import {
   TouchableHighlight,
   TextInput
 } from 'react-native';
+import { MessageContainer } from './comps/MessageContainerComp.js';
 
 export class ChatRoomPage extends React.Component {
     constructor (props) {
@@ -45,24 +46,24 @@ export class ChatRoomPage extends React.Component {
                         </View>
 
                     </View>  
-                    <View style={{flex: 2, backgroundColor: '#DCC6AB'}}/> 
+                    <View style={{flex: 0, backgroundColor: '#DCC6AB'}}/> 
                     <View style={{flex: 1, backgroundColor: '#9B9B9B'}}/> 
                 </View>
                 
                 <View style={{flex: 10}}>
                     <ScrollView>
-                        {/*<ChatContainer></ChatContainer>*/}
+                        <MessageContainer userid={this.userid}></MessageContainer>
                     </ScrollView>
                 </View>
                 
-                <View style={{flex: 1, flexDirection: "row", backgroundColor: "#FAB8B8"}}>
+                <View style={{flex: 1, flexDirection: "row", backgroundColor: "#DBCECE"}}>
                     <TextInput style={{flex: 8, marginLeft: 10, alignItems: 'center'}} 
                         placeholder={'Message ' + this.userid} 
                         onChangeText={(text)=>{
                             this.message.text = text;
                         }} 
                     />
-                    <TouchableHighlight onPress={()=>{}}>
+                    <TouchableHighlight onPress={()=>{/*post message*/}}>
                         <View style={{marginHorizontal: 20, marginTop: 15}}>
                             <Text>/\</Text>
                         </View>
